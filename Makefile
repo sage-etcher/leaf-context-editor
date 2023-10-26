@@ -17,8 +17,8 @@
 #  limitations under the License.
 #
 
-PROJECT_NAME := Leaf C Project Template
-PROJECT_VERSION := 0.8.1.18-dev 
+PROJECT_NAME := Leaf Context Editor
+PROJECT_VERSION := 0.1.0.0-dev 
 # VERSION in the form MAJOR.MINOR.PATCH.BUILD-AUDIENCE
 # Example for Developer Build, version 2.14 patch 3
 # 2.14.3.841-dev
