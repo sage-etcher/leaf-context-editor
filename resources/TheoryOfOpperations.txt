@@ -1,0 +1,33 @@
+hostname@hellorld/ $ ls
+./      ../
+
+hostname@hellorld/ $ led main.c.orig -o main.c.new
+NEW FILE
+    :*I
+   0: Line one
+   1: ^Z
+    :*E
+
+hostname@hellorld/ $ ls
+./      ../     main.c.orig     main.c.new
+
+hostname@hellorld/ $ cat main.c.orig
+
+hostname@hellorld/ $ cat main.c.new
+LINE ONE
+
+hostname@hellorld/ $ led --help
+LED - Leaf Context Editor 0.1.0.0-dev (2023 Oct 26)
+a CP/M 2.0 ED.COM context editor clone for unix-based platforms
+
+Usage: led [OPTIONS] FILE [-o OUTFILE]      read from FILE 
+   or: led [OPTIONS] - [-o OUTFILE]         read from stdin 
+
+Mandatory arguements to long options are mandatory for short optiosn too.
+   -o, --output FILE        Use specified file as the Output file
+   -R, --read-only          Read only, don't allow edits to the file
+   -L, --line-numbers       Print line numbers
+   -l, --no-line-numbers    Don't print line numbers
+       --help               Print Help (this page) and exit
+       --version            Print version information and exit
+

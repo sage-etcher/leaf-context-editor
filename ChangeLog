@@ -1,3 +1,18 @@
+10/26/2023 16:23 Sage I. Hendricks <sage.message@email.com>
+
+	Added simple commandline options to program
+
+	* HELP: made text file with HELP message
+	* source/example/*: removed example program
+	* source/conio.*: new source and header file for console input/output
+	* source/fileio.*: new source and header file for file input/output
+	* source/interpreter.*: new soruce and header file for interpretting
+	commands in real time.
+	* source/main.c (main, exit_procedure, print_file, exit_with_message,
+	get_conargs): Added basic if else line for console arguements, an exit
+	procedure, and a file based error log function
+	* Makefile: Updated makefile to compile our program from source
+
 10/26/2023 11:25 Sage I. Hendricks <sage.message@email.com>
 
 	Changed template's project name and project version to match this project.

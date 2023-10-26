@@ -18,7 +18,7 @@
 #
 
 PROJECT_NAME := Leaf Context Editor
-PROJECT_VERSION := 0.1.0.0-dev 
+PROJECT_VERSION := 0.2.0.1-dev 
 # VERSION in the form MAJOR.MINOR.PATCH.BUILD-AUDIENCE
 # Example for Developer Build, version 2.14 patch 3
 # 2.14.3.841-dev
@@ -36,10 +36,10 @@ LIBRARY_DIR := $(SOURCE_DIR)/lib
 
 
 # Important Files
-EXAMPLE_EXEC := example.exe
-EXAMPLE_SOURCE_FILENAMES := example/main.c example/example.c
-EXAMPLE_SOURCE_FILES := $(foreach filename,$(EXAMPLE_SOURCE_FILENAMES),$(SOURCE_DIR)/$(filename))
-EXAMPLE_OBJECT_FILES := $(foreach filename,$(EXAMPLE_SOURCE_FILES),$(BUILD_DIR)/$(filename).o)
+LED_EXEC := led.exe
+LED_SOURCE_FILENAMES := main.c conio.c fileio.c interpreter.c
+LED_SOURCE_FILES := $(foreach filename,$(LED_SOURCE_FILENAMES),$(SOURCE_DIR)/$(filename))
+LED_OBJECT_FILES := $(foreach filename,$(LED_SOURCE_FILES),$(BUILD_DIR)/$(filename).o)
 
 
 # Compiler and Linker Options
@@ -55,11 +55,11 @@ LINKER_FLAGS := $(LIBRARY_FLAGS)
 
 # Build
 .PHONY: build
-build: $(BUILD_DIR)/$(EXAMPLE_EXEC)
+build: $(BUILD_DIR)/$(LED_EXEC)
 
-$(BUILD_DIR)/$(EXAMPLE_EXEC): $(EXAMPLE_OBJECT_FILES)
+$(BUILD_DIR)/$(LED_EXEC): $(LED_OBJECT_FILES)
 	mkdir -pv $(dir $@)
-	$(LD) -o $@ $(LINKER_FLAGS) $(EXAMPLE_SOURCE_FILES)
+	$(LD) -o $@ $(LINKER_FLAGS) $(LED_SOURCE_FILES)
 
 
 $(BUILD_DIR)/$(SOURCE_DIR)/%.c.o: $(SOURCE_DIR)/%.c
@@ -75,10 +75,10 @@ clean:
 
 # Install
 .PHONY: install
-install: $(DESTDIR)/bin/$(EXAMPLE_EXEC)
+install: $(DESTDIR)/bin/$(LED_EXEC)
 
 
-$(DESTDIR)/bin/$(EXAMPLE_EXEC): $(BUILD_DIR)/$(EXAMPLE_EXEC)
+$(DESTDIR)/bin/$(LED_EXEC): $(BUILD_DIR)/$(LED_EXEC)
 	mkdir -pv $(dir $@)
 	cp -fv $< $@
 
@@ -86,6 +86,6 @@ $(DESTDIR)/bin/$(EXAMPLE_EXEC): $(BUILD_DIR)/$(EXAMPLE_EXEC)
 # Uninstall
 .PHONY: uninstall
 uninstall:
-	rm -fv $(DESTDIR)/bin/$(EXAMPLE_EXEC)
+	rm -fv $(DESTDIR)/bin/$(LED_EXEC)
 
 

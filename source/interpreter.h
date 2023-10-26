@@ -1,6 +1,6 @@
 /*
-   source/example/example.h
-   An Example C header file. 
+   source/interpreter.h
+   Leaf Context Editor command interpreter header file. 
  
    Copyright 2023 Leaf Software Foundation
 
@@ -21,24 +21,37 @@
 
 /* run once */
 #pragma once
-#ifndef __EXAMPLE_HEADER__
-#define __EXAMPLE_HEADER__
+#ifndef __LED_INTERPRETER_HEADER__
+#define __LED_INTERPRETER_HEADER__
 
 /* include headers */
 #include <stdio.h>
+#include <stdbool.h>
+
+#include "conio.h"
+#include "fileio.h"
 
 
 /* custom datatypes */
+typedef struct LEDSettings
+{
+    char *source_file;
+    char *dest_file;
+
+    bool read_only;
+    bool show_line_numbers;
+} LEDSettings;
 
 
 /* constants */
+#define DEFAULT_SETTINGS (LEDSettings){NULL, NULL, false, true}
 
 
 /* global variables */
 
 
 /* external function prototypes */
-void ex_hello_world (void);
+void interpreter_test (void);
 
 
 #endif /* end run once */

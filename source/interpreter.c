@@ -1,6 +1,6 @@
 /*
-   source/example/example.c
-   An Example C source file. 
+   source/interpreter.c
+  Leaf Context Editor command interpreter source file.
  
    Copyright 2023 Leaf Software Foundation
 
@@ -19,10 +19,13 @@
 */
 
 
-#include "example.h"
+#include "interpreter.h"
 
 /* include headers */
 #include <stdio.h>
+
+#include "conio.h"
+#include "fileio.h"
 
 
 /* file static variables */
@@ -33,10 +36,9 @@
 
 /* function definitions */
 void
-ex_hello_world (void)
+interpreter_test (void)
 {
-    printf ("Hello, World!\n");
-    return;
+    printf ("interpreter\n");
 }
 
 

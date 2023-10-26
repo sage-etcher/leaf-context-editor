@@ -1,6 +1,6 @@
 /*
-   source/example/main.c
-   an example program that prints hello world and exits.
+   source/fileio.h
+   Leaf Context Editor file input/output header file.
  
    Copyright 2023 Leaf Software Foundation
 
@@ -19,29 +19,29 @@
 */
 
 
+/* run once */
+#pragma once
+#ifndef __LED_FILEIO_HEADER__
+#define __LED_FILEIO_HEADER__
+
 /* include headers */
-#include <stdlib.h>
-
-#include "example.h"
+#include <stdio.h>
 
 
-/* file static variables */
+/* custom datatypes */
 
 
-/* file static function prototypes */
+/* constants */
 
 
-/* main program-entry-point */
-int
-main (int argc, char *argv[])
-{
-    ex_hello_world ();
-
-    return EXIT_SUCCESS;
-}
+/* global variables */
 
 
-/* function definitions */
+/* external function prototypes */
+void fileio_test (void);
+
+
+#endif /* end run once */
 
 
 /* End of File */
