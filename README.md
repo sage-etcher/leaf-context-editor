@@ -18,7 +18,7 @@ $ make build
 |:-----|-----------|
 | VERSION | Contains program's name, version, and licensing information |
 | Makefile | GNU Makefile used to build and install the program |
-| source/example/\* | Hello World Example program sources |
+| source/\*.{c,h} | Program source files |
 | source/template/main.c | Template main source file |
 | source/template/template.c | Template source file |
 | source/tempalte/template.h | Template header file |
