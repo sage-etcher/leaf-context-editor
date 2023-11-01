@@ -2,7 +2,7 @@
    source/template/tempalte.c
    A Template C source file. 
  
-   Copyright 2023 Leaf Software Foundation
+   Copyright 2023 Sage I. Hendricks
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

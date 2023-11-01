@@ -1,8 +1,8 @@
 /*
-   source/conio.c
-   Leaf Context Editor console input/output source file. 
- 
-   Copyright 2023 Leaf Software Foundation
+   source/utilities.h
+   Leaf Context Editor's general utilities header file.
+
+   Copyright 2023 Sage I. Hendricks
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -19,24 +19,22 @@
 */
 
 
-#include "conio.h"
+/* run once */
+#pragma once
+#ifndef __LED_UTILITIES_HEADER__
+#define __LED_UTILITIES_HEADER__
 
 /* include headers */
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 
-/* file static variables */
+/* external function prototypes */
+char * string_dup (const char *src);
 
 
-/* file static function prototypes */
-
-
-/* function definitions */
-void
-conio_test (void)
-{
-    printf ("conio\n");
-}
+#endif /* end run once */
 
 
 /* End of File */

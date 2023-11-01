@@ -1,6 +1,6 @@
 /*
-   source/template/template.h
-   A Template C header file. 
+   source/settings_struct.h
+   Leaf Context Editor settings structure header file. 
  
    Copyright 2023 Sage I. Hendricks
 
@@ -21,22 +21,35 @@
 
 /* run once */
 #pragma once
-#ifndef __TEMPLATE_HEADER__
-#define __TEMPLATE_HEADER__
+#ifndef __LED_SETTINGS_STRUCT_HEADER__
+#define __LED_SETTINGS_STRUCT_HEADER__
 
 /* include headers */
+#include <stdbool.h>
+#include <malloc.h>
 
 
 /* custom datatypes */
+typedef struct LEDSettings
+{
+    char *source_file;
+    char *dest_file;
 
+    bool read_only;
+    bool show_line_numbers;
 
-/* constants */
+    bool abort_program;
+    int  exit_code;
+} LEDSettings;
 
 
 /* global variables */
+extern LEDSettings g_settings;
 
 
 /* external function prototypes */
+LEDSettings default_settings (void);
+void free_settings (LEDSettings s);
 
 
 #endif /* end run once */

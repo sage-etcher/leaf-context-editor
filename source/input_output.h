@@ -1,8 +1,9 @@
 /*
-   source/conio.h
-   Leaf Context Editor console input/output header file.
+   source/input_output.h
+   Leaf Context Editor general input/output header file, handles both file 
+   and terminal.
  
-   Copyright 2023 Leaf Software Foundation
+   Copyright 2023 Sage I. Hendricks
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -21,24 +22,28 @@
 
 /* run once */
 #pragma once
-#ifndef __LED_CONIO_HEADER__
-#define __LED_CONIO_HEADER__
+#ifndef __LED_INPUT_OUTPUT_HEADER
+#define __LED_INPUT_OUTPUT_HEADER__
 
 /* include headers */
 #include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+#include <malloc.h>
 
-
-/* custom datatypes */
+#include "settings_struct.h"
+#include "utilities.h"
 
 
 /* constants */
-
-
-/* global variables */
+#define HELP_FILE "./HELP"
+#define VERSION_FILE "./VERSION"
 
 
 /* external function prototypes */
-void conio_test (void);
+void file_print       (const char *filename);
+void file_print_exit  (const char *filename, int exit_code);
+void con_get_settings (int argc, char **argv);
 
 
 #endif /* end run once */

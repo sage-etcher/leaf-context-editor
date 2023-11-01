@@ -1,4 +1,4 @@
-LED - Leaf Context Editor 0.2.0.1-dev (2023 Oct 26)
+LED - Leaf Context Editor 0.3.0.2-dev (2023 Nov 1)
 a CP/M 2.0 ED.COM context editor clone for unix-based platforms
 
 Usage: led [OPTIONS] FILE [-o OUTFILE]      read from FILE 

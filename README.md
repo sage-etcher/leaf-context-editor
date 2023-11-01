@@ -1,6 +1,6 @@
 # Leaf Context Editor
 
-___version:___ 0.2.0.1-dev
+___version:___ 0.3.0.2-dev
 
 A generic template for making cleanly organized C projects; lightly inspired by the GNU Coding Standards and various other resources.
 
@@ -26,7 +26,7 @@ $ make build
 
 ## License
 
-Copyright 2023 Leaf Software Foundation  
+Copyright 2023 Sage I. Hendricks
 
 Licensed under the Apache License, Version 2.0 (the "License");  
 you may not use this file except in compliance with the License.  

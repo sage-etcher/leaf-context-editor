@@ -1,8 +1,8 @@
 /*
-   source/fileio.h
-   Leaf Context Editor file input/output header file.
- 
-   Copyright 2023 Leaf Software Foundation
+   source/utilities.c
+   Leaf Context Editor's general utilities source file.
+
+   Copyright 2023 Sage I. Hendricks
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -19,29 +19,29 @@
 */
 
 
-/* run once */
-#pragma once
-#ifndef __LED_FILEIO_HEADER__
-#define __LED_FILEIO_HEADER__
+#include "utilities.h"
 
 /* include headers */
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 
-/* custom datatypes */
+/* function definitions */
+char *
+string_dup (const char *src)
+{
+    size_t len = strlen (src) + 1;
+    char *dest = malloc (len * sizeof (char));
+    if (dest == NULL)
+    {
+        fprintf (stderr, "failed to allocated memory in string_dup procedure\n");
+        exit (EXIT_FAILURE);
+    }
+    memcpy (dest, src, len * sizeof (char));
 
-
-/* constants */
-
-
-/* global variables */
-
-
-/* external function prototypes */
-void fileio_test (void);
-
-
-#endif /* end run once */
+    return dest;
+}
 
 
 /* End of File */

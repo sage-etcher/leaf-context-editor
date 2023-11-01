@@ -1,8 +1,8 @@
 /*
    source/interpreter.c
-  Leaf Context Editor command interpreter source file.
+   Leaf Context Editor command interpreter source file.
  
-   Copyright 2023 Leaf Software Foundation
+   Copyright 2023 Sage I. Hendricks
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -24,21 +24,16 @@
 /* include headers */
 #include <stdio.h>
 
-#include "conio.h"
-#include "fileio.h"
-
-
-/* file static variables */
-
-
-/* file static function prototypes */
+#include "settings_struct.h"
+#include "input_output.h"
 
 
 /* function definitions */
 void
-interpreter_test (void)
+start_interpreter (void)
 {
-    printf ("interpreter\n");
+    printf ("start\n");
+    return;
 }
 
 

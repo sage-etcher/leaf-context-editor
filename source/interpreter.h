@@ -2,7 +2,7 @@
    source/interpreter.h
    Leaf Context Editor command interpreter header file. 
  
-   Copyright 2023 Leaf Software Foundation
+   Copyright 2023 Sage I. Hendricks
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -26,32 +26,13 @@
 
 /* include headers */
 #include <stdio.h>
-#include <stdbool.h>
 
-#include "conio.h"
-#include "fileio.h"
-
-
-/* custom datatypes */
-typedef struct LEDSettings
-{
-    char *source_file;
-    char *dest_file;
-
-    bool read_only;
-    bool show_line_numbers;
-} LEDSettings;
-
-
-/* constants */
-#define DEFAULT_SETTINGS (LEDSettings){NULL, NULL, false, true}
-
-
-/* global variables */
+#include "settings_struct.h"
+#include "input_output.h"
 
 
 /* external function prototypes */
-void interpreter_test (void);
+void start_interpreter (void);
 
 
 #endif /* end run once */

@@ -1,3 +1,46 @@
+11/01/2023 14:36 Sage I. Hendricks <sage.message@email.com>
+
+	Imported the '.gitattributes' file from newer template version to
+	project.
+
+	* .gitattributes: imported from leaf-c-template repo11/01/2023 14:36
+
+11/01/2023 14:32 Sage I. Hendricks <sage.message@email.com>
+
+	Changed license owner from to 'Sage I. Hendricks' throughout the
+	project.
+
+	* source/**: replaced 'Leaf Software Foundation' with 'Sage I.
+	Hendricks' in licensing comments
+	* HELP: changed license owner
+	* README.md: changed license owner
+	* Makefile: changed license owner
+	* HELP: changed license owner
+
+11/01/2023 14:23 Sage I. Hendricks <sage.message@email.com>
+
+	Complete restructureing of the Command Line config logic.
+
+	* source/conio.*: renamed to 'source/input_output.*'
+	* source/filio.*: combined with 'source/conio.*', now found in
+	'source/input_output.*'
+	* source/utilities.* (string_dup): added string duplicate function
+	* source/settings_struct (struct LEDSettings, default_settings,
+	free_settings): Container for all things related to the settings
+	structure. Added functions for setting defaults and for freeing.
+	* source/input_output (file_print, file_print_exit,
+	reached_source_file, long_settings_name, short_settings_name,
+	conargs_get_config, conargs_get_source, out_file_specifier,
+	conargs_get_dest, con_get_settings): moved 'file_print' function here
+	from main, also moved (and restructed) 'get_conargs' from main to here.
+	* source/interpreter (start_interpreter): moved all settings functions
+	and typedefs to 'source/settings_struct.*' and added a debug function
+	to the pkg.
+	* source/main.c (main): completely restructured to use seperate files.
+	removed most functions and added a goto based cleanup in the main
+	function.
+	* Makefile: changed source names to match new and renamed files
+
 10/26/2023 16:23 Sage I. Hendricks <sage.message@email.com>
 
 	Added simple commandline options to program

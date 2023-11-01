@@ -2,7 +2,7 @@
 #  Makefile
 #  Simple GNU Makefile to build and install the project
 #
-#  Copyright 2023 Leaf Software Foundation
+#  Copyright 2023 Sage I. Hendricks
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 #
 
 PROJECT_NAME := Leaf Context Editor
-PROJECT_VERSION := 0.2.0.1-dev 
+PROJECT_VERSION := 0.3.0.2-dev 
 # VERSION in the form MAJOR.MINOR.PATCH.BUILD-AUDIENCE
 # Example for Developer Build, version 2.14 patch 3
 # 2.14.3.841-dev
@@ -37,7 +37,7 @@ LIBRARY_DIR := $(SOURCE_DIR)/lib
 
 # Important Files
 LED_EXEC := led.exe
-LED_SOURCE_FILENAMES := main.c conio.c fileio.c interpreter.c
+LED_SOURCE_FILENAMES := main.c utilities.c settings_struct.c input_output.c interpreter.c
 LED_SOURCE_FILES := $(foreach filename,$(LED_SOURCE_FILENAMES),$(SOURCE_DIR)/$(filename))
 LED_OBJECT_FILES := $(foreach filename,$(LED_SOURCE_FILES),$(BUILD_DIR)/$(filename).o)
 
