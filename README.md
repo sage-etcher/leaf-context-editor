@@ -1,6 +1,6 @@
 # Leaf Context Editor
 
-___version:___ 0.3.0.2-dev
+___version:___ 0.3.1.3-dev
 
 A generic template for making cleanly organized C projects; lightly inspired by the GNU Coding Standards and various other resources.
 

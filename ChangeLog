@@ -1,3 +1,9 @@
+11/01/2023 14:52 Sage I. Hendricks <sage.message@email.com>
+	
+	Removed unneeded function 'exit_procedure' from main file.
+
+	* source/main.c (exit_procedure): removed function.
+
 11/01/2023 14:36 Sage I. Hendricks <sage.message@email.com>
 
 	Imported the '.gitattributes' file from newer template version to

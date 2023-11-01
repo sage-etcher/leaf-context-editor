@@ -18,7 +18,7 @@
 #
 
 PROJECT_NAME := Leaf Context Editor
-PROJECT_VERSION := 0.3.0.2-dev 
+PROJECT_VERSION := 0.3.1.3-dev 
 # VERSION in the form MAJOR.MINOR.PATCH.BUILD-AUDIENCE
 # Example for Developer Build, version 2.14 patch 3
 # 2.14.3.841-dev

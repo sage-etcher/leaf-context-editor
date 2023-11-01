@@ -30,7 +30,7 @@
 /* constants */
 
 
-/* global veriables */
+/* global veriables definitions */
 LEDSettings g_settings;
 
 
@@ -38,7 +38,6 @@ LEDSettings g_settings;
 
 
 /* file static function prototypes */
-static void exit_procedure (void);
 
 
 /* main program-entry-point */
@@ -49,25 +48,19 @@ main (int argc, char **argv)
     con_get_settings (argc, argv);           /* get console arguement settings */
     if (g_settings.abort_program)
     {
-        goto exit_one;
+        goto exit_top;
     }
 
     start_interpreter ();               /* start the interpreter loop */
 
     /* exit successfully */
-exit_one:
-    exit_procedure (); 
+exit_top:
+    free_settings (g_settings);
     return (g_settings.exit_code);
 }
 
 
 /* function definitions */
-static void
-exit_procedure (void)
-{
-    /* free any allocated memeory */
-    free_settings (g_settings);
-}
 
 
 /* End of File */
