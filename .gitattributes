@@ -26,6 +26,7 @@ Makefile*   text eol=lf
 README      text eol=lf
 INSTALL     text eol=lf
 VERSION     text eol=lf
+HELP        text eol=lf
 ChangeLog   text eol=lf
 
 source/include/*/*  linguist-vendored
